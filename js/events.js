@@ -4,8 +4,22 @@ function getIt() {
   })
 }
 
+function frameIt(){
+  $('img').on('load', function() {
+   $('img').addClass('tasty')
+ })
+}
+
+function pressIt(){
+  $('#typing').on('keydown', function(e){
+    if(e.which === 71){
+      alert('G was pressed.')
+    }
+  })
+}
 
 $(document).ready(function(){
-getIt();
-
+getIt()
+frameIt()
+pressIt()
 });
